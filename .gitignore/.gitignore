@@ -23,3 +23,8 @@
 hs_err_pid*
 # config files related to the eclipse
 /target/*
+*.DS_Store
+*.classpath
+*.project
+*.settings/*
+target/*
