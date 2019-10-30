@@ -33,7 +33,7 @@ public class ApplicationDriver {
 		Thread consumerTokenService = new Thread(new Runnable() {
 			@Override
 			public void run() {
-				KafkaTokenConsumer.tokenCounterForAll();
+				KafkaTokenConsumer.openTokenCounterForAll();
 			}
 		});
 

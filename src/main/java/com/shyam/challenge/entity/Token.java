@@ -34,7 +34,7 @@ public class Token implements Serializable {
 	}
 
 	public String toString() {
-		return "[TokenId: " + this.tokenId + ", TokenValue: " + this.isPremium + "]";
+		return "[TokenId: " + this.tokenId + ", IsPremium: " + this.isPremium + "]";
 	}
 
 }

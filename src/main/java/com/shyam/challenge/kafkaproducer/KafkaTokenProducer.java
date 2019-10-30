@@ -20,7 +20,9 @@ public class KafkaTokenProducer {
 		props.put("bootstrap.servers", kafkaServers);
 		props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 		props.put("value.serializer", "com.shyam.challenge.serializer.TokenSerializer");
-
+		props.put("partitioner.class", "com.shyam.challenge.custompartitioner.CustomPartitionerForNormalAndPremiumToken");
+		
+		
 		Producer<String, Token> producer = new KafkaProducer<String, Token>(props);
 
 		ProducerRecord<String, Token> producerRecord = new ProducerRecord<String, Token>(topicName, token);
